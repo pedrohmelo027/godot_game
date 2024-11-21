@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://pl2hbdol7a04"]
+
+[ext_resource type="Script" path="res://scripts/move_plataforma.gd" id="1_jlcyt"]
+[ext_resource type="Texture2D" uid="uid://tvhuewqug1bg" path="res://assets/mapas/Sidescroller Shooter - Central City/Mapa 2/Assets/Buildings.png" id="1_lbf46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi44s"]
+size = Vector2(105, 13)
+
+[node name="move_plataforma" type="Node2D"]
+script = ExtResource("1_jlcyt")
+
+[node name="plataforma" type="AnimatableBody2D" parent="."]
+
+[node name="sprite_plataforma" type="Sprite2D" parent="plataforma"]
+position = Vector2(-1.52588e-05, 0.249994)
+scale = Vector2(3.07576, 2.41666)
+texture = ExtResource("1_lbf46")
+region_enabled = true
+region_rect = Rect2(310.685, 96.3242, 34.4132, 5.46288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma"]
+shape = SubResource("RectangleShape2D_pi44s")
